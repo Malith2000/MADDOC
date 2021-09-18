@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mad">
+        <activity android:name=".cart"></activity>
         <activity android:name=".Menu2">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
