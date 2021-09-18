@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mad">
-        <activity android:name=".homeTakeaway"></activity>
+        <activity android:name=".kadiyaMenuAdmin"></activity>
+        <activity android:name=".kadiyaEditMenu" />
+        <activity android:name=".kadiyaAddItem" />
+        <activity android:name=".homeTakeaway" />
         <activity android:name=".homeDelivery" />
         <activity android:name=".cartUpdate" />
         <activity android:name=".cart" />
