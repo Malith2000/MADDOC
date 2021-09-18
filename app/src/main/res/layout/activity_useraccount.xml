@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".useraccount">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="415dp"
+        android:layout_height="91dp"
+        android:background="#FFC107"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <TextView
+        android:layout_width="415dp"
+        android:layout_height="101dp"
+        android:background="#FFC107"
+        android:paddingTop="50dp"
+        android:text="Powered by MADDOC Creations"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="637dp" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="48dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#FFC107"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/_26083"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFC107"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="17dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="93dp"
+        android:layout_height="86dp"
+        android:backgroundTint="#FFC107"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#FFC107"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail"
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="17dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/MyAccount"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="107dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fname"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lname"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pno"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="391dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/em"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/exfname"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/exlname"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <EditText
+        android:id="@+id/editTextPhone2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="@string/expno"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/exemail"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="521dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="136dp"
+        android:layout_height="53dp"
+        android:text="@string/editAcc"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="577dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="144dp"
+        android:layout_height="56dp"
+        android:text="@string/deleteAc"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="574dp" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="@string/longline"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="147dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
