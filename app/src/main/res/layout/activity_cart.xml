@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/foodback"
     tools:context=".cart">
 
     <TextView
@@ -95,19 +96,28 @@
         app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/_26083" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="68dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginLeft="168dp"
-        android:layout_marginBottom="488dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="CART"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView32"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ScrollView
+        android:layout_width="346dp"
+        android:layout_height="490dp"
+        android:background="#FFFFFF"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="120dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CART"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

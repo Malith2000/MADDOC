@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/foodback"
     tools:context=".homeDelivery">
 
     <TextView
@@ -95,6 +96,24 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
 
+    <TextView
+        android:id="@+id/whiteBackgroundDelivery"
+        android:layout_width="357dp"
+        android:layout_height="477dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="35dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textView58"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40"
+        app:layout_constraintVertical_bias="0.0" />
+
     <Button
         android:id="@+id/deliveryButton"
         android:layout_width="wrap_content"
@@ -116,20 +135,6 @@
         android:text="TAKE AWAY"
         android:textColor="#0B0A0A"
         app:backgroundTint="#EAE3E3"
-        app:layout_constraintBottom_toTopOf="@+id/textView58"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/searchCategory"
-        android:layout_width="223dp"
-        android:layout_height="52dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="92dp"
-        android:layout_marginRight="92dp"
-        android:layout_marginBottom="344dp"
-        android:text="SEARCH CATEGORY"
-        android:textAlignment="center"
-        android:textIsSelectable="false"
         app:layout_constraintBottom_toTopOf="@+id/textView58"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -158,4 +163,22 @@
         android:text="VIEW ALL DEALS"
         app:layout_constraintBottom_toTopOf="@+id/textView58"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/selectCategoryDropdown"
+        android:layout_width="219dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/popularDeals"
+        tools:layout_editor_absoluteX="96dp" />
+
+    <TextView
+        android:id="@+id/selectCategoryText"
+        android:layout_width="151dp"
+        android:layout_height="26dp"
+        android:text="SELECT CATEGORY"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="269dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
