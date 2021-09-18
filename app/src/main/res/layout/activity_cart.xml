@@ -106,6 +106,7 @@
         android:inputType="textPersonName"
         android:text="CART"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView32"
         app:layout_constraintStart_toStartOf="parent" />
 
