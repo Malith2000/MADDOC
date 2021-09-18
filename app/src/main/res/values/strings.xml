@@ -55,4 +55,15 @@
     <string name="Kottu">Kottu</string>
     <string name="VIEW">View</string>
     <string name="Beverages">Beverages</string>
+    <string name="footer_text">Powered By MADDOC Creations</string>
+    <string name="header1">FEEDBACK</string>
+    <string name="txttype">Type</string>
+    <string name="fnametxt">First Name</string>
+    <string name="lnametxt">Last Name</string>
+    <string name="pnotxt">Phone Number</string>
+    <string name="email1">Email</string>
+    <string name="mess">Message</string>
+    <string name="datetxt">Date</string>
+    <string name="myriewhead">MY REVIEWS</string>
+    <string name="rating">Star Rating</string>
 </resources>
