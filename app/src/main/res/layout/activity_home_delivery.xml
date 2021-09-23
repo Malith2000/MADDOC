@@ -4,181 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foodback"
     tools:context=".homeDelivery">
 
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="415dp"
-        android:layout_height="91dp"
-
-        android:background="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView58"
-        android:layout_width="415dp"
-        android:layout_height="91dp"
-        android:layout_gravity="center_horizontal"
-        android:background="#FFC107"
-        android:paddingTop="50dp"
-        android:text="@string/textView2"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/imageButton38"
-        android:layout_width="93dp"
-        android:layout_height="86dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView40"
-        app:layout_constraintHorizontal_bias="0.034"
-        app:layout_constraintStart_toStartOf="@+id/textView40"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007"
-        app:srcCompat="@drawable/logo"/>
-
-    <ImageButton
-        android:id="@+id/imageButton39"
-        android:layout_width="50dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
-        app:layout_constraintStart_toStartOf="@+id/textView40"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448"
-        app:tint="#000000"/>
-
-    <ImageButton
-        android:id="@+id/imageButton40"
-        android:layout_width="50dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/_26083" />
-
-    <ImageButton
-        android:id="@+id/imageButton41"
-        android:layout_width="54dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/textView40"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
-
-    <TextView
-        android:id="@+id/whiteBackgroundDelivery"
-        android:layout_width="357dp"
-        android:layout_height="477dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="35dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView58"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView40"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/deliveryButton"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="216dp"
-        android:layout_marginRight="216dp"
-        android:layout_marginBottom="412dp"
-        android:text="DELIVERY"
-        app:layout_constraintBottom_toTopOf="@+id/textView58"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:background="#F1C107"
+        app:cardBackgroundColor="#FFC107"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/takeawayButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
-        android:layout_marginBottom="412dp"
-        android:text="TAKE AWAY"
-        android:textColor="#0B0A0A"
-        app:backgroundTint="#EAE3E3"
-        app:layout_constraintBottom_toTopOf="@+id/textView58"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/popularDeals"
-        android:layout_width="201dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="107dp"
-        android:layout_marginRight="107dp"
-        android:layout_marginBottom="134dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="POPULAR DEALS"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/viewAllDealsButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <ImageButton
+                android:id="@+id/imageButton23"
+                android:layout_width="93dp"
+                android:layout_height="86dp"
+                android:layout_gravity="left|center_vertical"
+                android:backgroundTint="#FFC107"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/logo" />
 
-    <Button
-        android:id="@+id/viewAllDealsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="127dp"
-        android:layout_marginRight="127dp"
-        android:layout_marginBottom="66dp"
-        android:text="VIEW ALL DEALS"
-        app:layout_constraintBottom_toTopOf="@+id/textView58"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
 
-    <Spinner
-        android:id="@+id/selectCategoryDropdown"
-        android:layout_width="219dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/popularDeals"
-        tools:layout_editor_absoluteX="96dp" />
+                <ImageButton
+                    android:id="@+id/imageButton22"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448" />
 
-    <TextView
-        android:id="@+id/selectCategoryText"
-        android:layout_width="151dp"
-        android:layout_height="26dp"
-        android:text="SELECT CATEGORY"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="269dp" />
+                <ImageButton
+                    android:id="@+id/imageButton21"
+                    android:layout_width="48dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/_26083" />
+
+                <ImageButton
+                    android:id="@+id/imageButton24"
+                    android:layout_width="54dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_20210922_003736"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fstTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="cursive"
+                android:text="Cart"
+                android:textColor="@color/black"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/deliveryButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="200dp"
+                        android:layout_marginRight="200dp"
+                        android:layout_marginBottom="412dp"
+                        android:text="DELIVERY"
+                        android:textColor="#0C0C0C"
+                        app:backgroundTint="#EAE3E3"
+                        app:layout_constraintBottom_toTopOf="@+id/textView61"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/takeawayButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="96dp"
+                        android:layout_marginRight="96dp"
+                        android:layout_marginBottom="412dp"
+                        android:text="TAKE AWAY"
+                        android:textColor="#FAF8F8"
+                        app:backgroundTint="#6232B8"
+                        app:layout_constraintBottom_toTopOf="@+id/textView61"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

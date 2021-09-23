@@ -4,127 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foodback"
     tools:context=".cartUpdate">
 
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="415dp"
-        android:layout_height="91dp"
-
-        android:background="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView39"
-        android:layout_width="415dp"
-        android:layout_height="91dp"
-        android:layout_gravity="center_horizontal"
-        android:background="#FFC107"
-        android:paddingTop="50dp"
-        android:text="@string/textView2"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"  />
-
-    <ImageButton
-        android:id="@+id/imageButton33"
-        android:layout_width="93dp"
-        android:layout_height="86dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView33"
-        app:layout_constraintHorizontal_bias="0.034"
-        app:layout_constraintStart_toStartOf="@+id/textView33"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007"
-        app:srcCompat="@drawable/logo" />
-
-    <ImageButton
-        android:id="@+id/imageButton34"
-        android:layout_width="50dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
-        app:layout_constraintStart_toStartOf="@+id/textView33"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448"
-        app:tint="#000000"/>
-
-    <ImageButton
-        android:id="@+id/imageButton35"
-        android:layout_width="50dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/_26083"  />
-
-    <ImageButton
-        android:id="@+id/imageButton36"
-        android:layout_width="54dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/textView31"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.372"
-        app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
-
-    <ScrollView
-        android:layout_width="360dp"
-        android:layout_height="501dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginBottom="23dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView39"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1C107"
+        app:cardBackgroundColor="#FFC107"
+        app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView33">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton23"
+                android:layout_width="93dp"
+                android:layout_height="86dp"
+                android:layout_gravity="left|center_vertical"
+                android:backgroundTint="#FFC107"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton22"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448" />
+
+                <ImageButton
+                    android:id="@+id/imageButton21"
+                    android:layout_width="48dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/_26083" />
+
+                <ImageButton
+                    android:id="@+id/imageButton24"
+                    android:layout_width="54dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_20210922_003736"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/updateCart"
-                android:layout_width="match_parent"
+                android:id="@+id/fstTxt"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="UPDATE CART"
-                android:textColor="#020202"
-                android:textSize="24sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="cursive"
+                android:text="Update Cart"
+                android:textColor="@color/black"
+                android:textSize="48sp"
                 android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#FFC107"
+                android:paddingTop="50dp"
+                android:text="Powered by MADDOC Creations"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
