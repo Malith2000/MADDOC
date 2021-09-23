@@ -13,9 +13,10 @@
         android:background="#FFC107"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView16"
@@ -25,7 +26,7 @@
         android:paddingTop="50dp"
         android:text="Powered by MADDOC Creations"
         android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
@@ -33,15 +34,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
+
     <ImageButton
         android:id="@+id/imageButton17"
         android:layout_width="48dp"
         android:layout_height="47dp"
         android:backgroundTint="#FFC107"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/_26083"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/_26083" />
 
     <ImageButton
         android:id="@+id/imageButton18"
@@ -49,9 +55,14 @@
         android:layout_height="48dp"
         android:backgroundTint="#FFC107"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="17dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448" />
+
 
     <ImageButton
         android:id="@+id/imageButton19"
@@ -59,10 +70,13 @@
         android:layout_height="86dp"
         android:backgroundTint="#FFC107"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="5dp" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009"
+        app:srcCompat="@drawable/logo" />
 
     <ImageButton
         android:id="@+id/imageButton20"
@@ -70,15 +84,18 @@
         android:layout_height="46dp"
         android:backgroundTint="#FFC107"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail"
-        tools:layout_editor_absoluteX="341dp"
-        tools:layout_editor_absoluteY="17dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/AcName"
         android:textColor="#000000"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -102,7 +119,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintVertical_bias="0.424" />
 
     <Button
         android:id="@+id/button8"
@@ -134,7 +151,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
+        app:layout_constraintVertical_bias="0.712" />
 
     <Button
         android:id="@+id/button11"
@@ -147,10 +164,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintVertical_bias="0.528" />
 
     <TextView
         android:id="@+id/textView29"
