@@ -122,22 +122,6 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:gravity="bottom"
-                android:text="@string/txttype"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
                 android:id="@+id/textView33"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
