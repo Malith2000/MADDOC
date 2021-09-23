@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Registration extends AppCompatActivity {
     EditText email,password,fname,lname,phone;
@@ -45,8 +49,14 @@ public class Registration extends AppCompatActivity {
                     email.setError("Please Enter UserName");
                     email.requestFocus();
                 }
+
+
                 else if(pwd.isEmpty()){
                     password.setError("Please Enter Password");
+                    password.requestFocus();
+                }
+                else if(pwd.length()<5){
+                    password.setError("Minimum password length should be 5 characters");
                     password.requestFocus();
                 }
                 else if(firstname.isEmpty()){
@@ -68,12 +78,28 @@ public class Registration extends AppCompatActivity {
                     mFirebaseAuth.createUserWithEmailAndPassword(Email,pwd).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull @org.jetbrains.annotations.NotNull Task<AuthResult> task) {
-                            if(!task.isSuccessful()){
-                                Toast.makeText(Registration.this,"Registration Unsuccessful",Toast.LENGTH_SHORT).show();
+                            if(!task.isSuccessful()) {
+                                Toast.makeText(Registration.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
                             }
                             else{
+
                                 startActivity(new Intent(Registration.this,MainActivity.class));
+                                User user = new User(firstname,lastname,Email,pwd,pno);
+                                FirebaseDatabase.getInstance().getReference("Users")
+                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                        .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull @NotNull Task<Void> task) {
+                                        if(task.isSuccessful()){
+                                            Toast.makeText(Registration.this,"User has been Registered Sucessfully!",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else{
+                                            Toast.makeText(Registration.this,"Failed to Register! Try Again",Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
                             }
+
                         }
                     });
                 }

@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                             } else {
                                 Intent intentmenu = new Intent(MainActivity.this, Menu.class);
                                 startActivity(intentmenu);
+
                             }
                         }
                     });
