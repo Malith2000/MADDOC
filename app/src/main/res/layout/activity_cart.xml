@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foodback"
+    android:background="@drawable/bg"
     tools:context=".cart">
 
     <TextView
@@ -97,11 +97,11 @@
         app:srcCompat="@drawable/_26083" />
 
     <ScrollView
-        android:layout_width="346dp"
-        android:layout_height="490dp"
-        android:background="#FDFFFFFF"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="120dp">
+        android:layout_width="406dp"
+        android:layout_height="541dp"
+        android:background="#00FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="96dp">
 
         <LinearLayout
             android:layout_width="match_parent"
