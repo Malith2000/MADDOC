@@ -64,4 +64,6 @@
     <string name="itemName">Item Name</string>
     <string name="itemPrice">Item Price</string>
     <string name="rice">Rice</string>
+    <string name="kottu">Kottu</string>
+    <string name="noodles">Noodles</string>
 </resources>

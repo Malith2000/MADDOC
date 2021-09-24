@@ -15,6 +15,7 @@
         android:ems="10"
         android:hint="@string/itemName"
         android:inputType="textPersonName"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.83"
@@ -30,6 +31,7 @@
         android:ems="10"
         android:hint="@string/itemPrice"
         android:inputType="textPersonName"
+        android:textColorHint="#040404"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.83"
@@ -107,9 +109,9 @@
         android:id="@+id/button28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginRight="152dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="140dp"
         android:text="@string/addItemButton"
         app:backgroundTint="#673AB7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -153,8 +155,47 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:inputType="none"
-            android:text="Category" />
+            android:text="Category"
+            android:textColorHint="#000000" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        app:layout_constraintEnd_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="415dp"
+                android:layout_height="101dp"
+                android:background="#FFC107"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingTop="50dp"
+                android:text="@string/textView2"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
