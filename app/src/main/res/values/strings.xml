@@ -2,7 +2,7 @@
     <string name="app_name">Mad</string>
     <string-array name="categories">
         <item>Rice</item>
-        <item>Noodles</item>
+        <item>Noodles2</item>
         <item>Kottu</item>
     </string-array>
     <string name="textView6">Lets Start Your Order </string>
@@ -65,5 +65,5 @@
     <string name="itemPrice">Item Price</string>
     <string name="rice">Rice</string>
     <string name="kottu">Kottu</string>
-    <string name="noodles">Noodles</string>
+    <string name="noodles2">Noodles</string>
 </resources>
