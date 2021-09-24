@@ -4,95 +4,157 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foodback"
+    android:background="@drawable/bg"
     tools:context=".kadiyaAddItem">
 
-    <TextView
-        android:id="@+id/textView62"
-        android:layout_width="415dp"
-        android:layout_height="91dp"
-
-        android:background="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="139dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="376dp"
+        android:ems="10"
+        android:hint="@string/itemName"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.262" />
 
-    <TextView
-        android:id="@+id/textView63"
-        android:layout_width="415dp"
-        android:layout_height="91dp"
-        android:layout_gravity="center_horizontal"
-        android:background="#FFC107"
-        android:paddingTop="50dp"
-        android:text="@string/textView2"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/editTextTextPersonName10"
+        android:layout_width="139dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="456dp"
+        android:ems="10"
+        android:hint="@string/itemPrice"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"  />
+        app:layout_constraintVertical_bias="0.262" />
 
-    <ImageButton
-        android:id="@+id/imageButton45"
-        android:layout_width="93dp"
-        android:layout_height="86dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView62"
-        app:layout_constraintHorizontal_bias="0.034"
-        app:layout_constraintStart_toStartOf="@+id/textView62"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007"
-        app:srcCompat="@drawable/logo" />
-
-    <ImageButton
-        android:id="@+id/imageButton46"
-        android:layout_width="50dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1C107"
+        app:cardBackgroundColor="#FFC107"
+        app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
-        app:layout_constraintStart_toStartOf="@+id/textView62"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448"
-        app:tint="#000000" />
-
-    <ImageButton
-        android:id="@+id/imageButton47"
-        android:layout_width="50dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/_26083"  />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/imageButton48"
-        android:layout_width="54dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:backgroundTint="#FFC107"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/textView62"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton23"
+                android:layout_width="93dp"
+                android:layout_height="86dp"
+                android:layout_gravity="left|center_vertical"
+                android:backgroundTint="#FFC107"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton22"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448" />
+
+                <ImageButton
+                    android:id="@+id/imageButton21"
+                    android:layout_width="48dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/_26083" />
+
+                <ImageButton
+                    android:id="@+id/imageButton24"
+                    android:layout_width="54dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginRight="152dp"
+        android:text="@string/addItemButton"
+        app:backgroundTint="#673AB7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.372"
-        app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail"  />
+    <EditText
+        android:id="@+id/editTextTextPersonName11"
+        android:layout_width="234dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:fontFamily="cursive"
+        android:inputType="textPersonName"
+        android:text="ADD ITEM"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/textInputLayout"
+        android:layout_width="136dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginLeft="224dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="Category" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

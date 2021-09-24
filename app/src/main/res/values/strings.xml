@@ -1,5 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Mad</string>
+    <string-array name="categories">
+        <item>Rice</item>
+        <item>Noodles</item>
+        <item>Kottu</item>
+    </string-array>
     <string name="textView6">Lets Start Your Order </string>
     <string name="Username">Username</string>
     <string name="Pw">Password</string>
@@ -37,7 +42,7 @@
     <string name="logout">Log Out</string>
     <string name="food">Food</string>
     <string name="DnB">Dessert and Beverages</string>
-    <string name="rice">Rice</string>
+    <string name="rice1">Rice</string>
     <string name="line">__________________________________</string>
     <string name="noodles">Noodles</string>
     <string name="chickenrice">Chicken Rice</string>
@@ -55,4 +60,8 @@
     <string name="Kottu">Kottu</string>
     <string name="VIEW">View</string>
     <string name="Beverages">Beverages</string>
+    <string name="addItemButton">Add Item</string>
+    <string name="itemName">Item Name</string>
+    <string name="itemPrice">Item Price</string>
+    <string name="rice">Rice</string>
 </resources>

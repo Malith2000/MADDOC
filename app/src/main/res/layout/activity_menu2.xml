@@ -6,27 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".Menu2">
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="411dp"
-        android:layout_height="90dp"
-        android:background="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1C107"
+        app:cardBackgroundColor="#FFC107"
+        app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton23"
+                android:layout_width="93dp"
+                android:layout_height="86dp"
+                android:layout_gravity="left|center_vertical"
+                android:backgroundTint="#FFC107"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton22"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448" />
+
+                <ImageButton
+                    android:id="@+id/imageButton21"
+                    android:layout_width="48dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/_26083" />
+
+                <ImageButton
+                    android:id="@+id/imageButton24"
+                    android:layout_width="54dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="#FFC107"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="407dp"
-        android:layout_height="453dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_20210922_003736"
         android:fillViewport="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView18">
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,143 +90,30 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/loginscrn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/rice"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <TextView
                 android:id="@+id/fstTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Welcome to Tutlane" />
+                android:fontFamily="cursive"
+                android:text="@string/rice"
+                android:textColor="@color/black"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="127dp"
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
                 android:layout_height="91dp"
-                android:layout_gravity="center"
-                app:layout_constraintBottom_toBottomOf="@+id/textView19"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.059"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.339"
-                app:srcCompat="@drawable/christopher_alvarenga_rqx9evpsfz8_unsplash" />
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chickenrice"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.821"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.306" />
-
-            <TextView
-                android:id="@+id/textView36"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/crprice"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.776"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.339" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button One" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="119dp"
-                android:layout_height="126dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView19"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.058"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView18"
-                app:layout_constraintVertical_bias="0.53"
-                app:srcCompat="@drawable/laura_lanckriet_kv66qwc8dee_unsplash" />
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/porkrice"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.764"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.475" />
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/porkprice"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.788"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.509" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button One" />
-
+                android:layout_gravity="center_horizontal"
+                android:background="#FFC107"
+                android:paddingTop="50dp"
+                android:text="Powered by MADDOC Creations"
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
 
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="415dp"
-        android:layout_height="101dp"
-        android:layout_gravity="center"
-        android:background="#FFC107"
-        android:gravity="center_horizontal"
-        android:paddingTop="50dp"
-        android:text="Powered by MADDOC Creations"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
