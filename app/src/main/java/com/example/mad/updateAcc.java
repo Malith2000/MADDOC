@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,11 +38,12 @@ public class updateAcc extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-    private Button updateBtn;
+    private Button deleteAccount;
     private FirebaseDatabase database;
     private User account;
     private static String LOG_TAG= updateAcc.class.getSimpleName();
     String PersonName6,PersonName7,Phone3,EmailAddress3,Password5;
+    public ImageButton quickmenu,homeBtn,imagebutton2;
 
 
 
@@ -54,6 +56,36 @@ public class updateAcc extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
+
+        imagebutton2 = (ImageButton)findViewById(R.id.imageButton22);
+        imagebutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(updateAcc.this, useraccount.class);
+                startActivity(intent2);
+            }
+        });
+
+        quickmenu = (ImageButton)findViewById(R.id.imageButton24);
+        quickmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v1) {
+
+                Intent intent3 = new Intent(updateAcc.this, AccountMenu.class);
+                startActivity(intent3);
+            }
+        });
+
+        homeBtn = (ImageButton)findViewById(R.id.imageButton23);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v1) {
+
+                Intent intent3 = new Intent(updateAcc.this,Menu.class);
+                startActivity(intent3);
+            }
+        });
+
 
          upFn =  findViewById(R.id.editTextTextPersonName6);
          upLn =  findViewById(R.id.editTextTextPersonName7);

@@ -85,7 +85,7 @@ public class Registration extends AppCompatActivity {
 
                                 startActivity(new Intent(Registration.this,MainActivity.class));
                                 User user = new User(firstname,lastname,Email,pwd,pno);
-                                FirebaseDatabase.getInstance().getReference("Admins")
+                                FirebaseDatabase.getInstance().getReference("Users")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
