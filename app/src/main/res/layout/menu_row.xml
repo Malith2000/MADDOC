@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.mad.models.Item" />
+        <variable
+            name="menuInterface"
+            type="com.example.mad.adapters.MenuListAdapter.MenuInterface" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()-> menuInterface.onItemClick(item)}"
+        android:background="?attr/selectableItemBackground"
+        >
+
+        <ImageView
+            android:id="@+id/foodImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:itemImage="@{item.imageUrl}"
+            app:srcCompat="@drawable/christopher_alvarenga_rqx9evpsfz8_unsplash" />
+
+        <TextView
+            android:id="@+id/itemNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_gravity="center"
+            android:text="@{item.name}" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:text="@{String.valueOf(item.price) }" />
+
+        <TextView
+            android:id="@+id/availableTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/design_default_color_primary"
+            android:text="@{item.available ? 'Available' : 'Out of Stock'}"
+            />
+
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:enabled="@{item.available}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:text="Add to Cart" />
+    </LinearLayout>
+</layout>

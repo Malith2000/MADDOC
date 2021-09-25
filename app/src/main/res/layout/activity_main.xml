@@ -50,23 +50,6 @@
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/account_avatar_profile_human_man_user_30448" />
 
-                <ImageButton
-                    android:id="@+id/imageButton21"
-                    android:layout_width="48dp"
-                    android:layout_height="47dp"
-                    android:layout_gravity="center_vertical"
-                    android:backgroundTint="#FFC107"
-                    android:scaleType="centerInside"
-                    app:srcCompat="@drawable/_26083" />
-
-                <ImageButton
-                    android:id="@+id/imageButton24"
-                    android:layout_width="54dp"
-                    android:layout_height="46dp"
-                    android:layout_gravity="center_vertical"
-                    android:backgroundTint="#FFC107"
-                    android:scaleType="centerInside"
-                    app:srcCompat="@drawable/png_transparent_hamburger_button_computer_icons_drop_down_list_fast_food_menu_rectangle_share_icon_pancake_thumbnail" />
             </LinearLayout>
         </LinearLayout>
 

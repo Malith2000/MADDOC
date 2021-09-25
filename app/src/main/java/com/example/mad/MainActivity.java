@@ -2,7 +2,12 @@ package com.example.mad;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
+
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public Button button;
     public Button button1;
 
+
     private FirebaseAuth.AuthStateListener mAuthstateListner;
 
     @Override
@@ -34,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.editTextTextEmailAddress5);
         password = findViewById(R.id.editTextTextPassword);
         button1 = findViewById(R.id.button);
+
+
 
         mAuthstateListner = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -97,9 +105,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     protected void onStart() {
         super.onStart();
         mFirebaseAuth.addAuthStateListener(mAuthstateListner);
     }
+
+
 }
