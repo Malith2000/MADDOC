@@ -96,7 +96,7 @@
                 android:enabled="@{menuViewModel.items.available}"
                 android:text="Add to cart"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
-                android:onClick="@{() -> menuViewModel.addItemToCart(menuViewModel.items)}"
+                android:onClick="@{() -> menuViewModel.addItemToCart(menuViewModel.item)}"
                 />
         </LinearLayout>
 

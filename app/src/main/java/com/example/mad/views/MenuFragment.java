@@ -21,6 +21,8 @@ import com.example.mad.adapters.MenuListAdapter;
 import com.example.mad.databinding.FragmentMenuBinding;
 import com.example.mad.models.Item;
 import com.example.mad.viewmodels.MenuViewModel;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -76,11 +78,26 @@ public class MenuFragment extends Fragment implements MenuListAdapter.MenuInterf
     @Override
     public void addItem(Item item) {
 
+        boolean isAdded = menuViewModel.addItemToCart(item);
+        if(isAdded){
+            Snackbar.make(requireView(), item.getName() +"added to cart", Snackbar.LENGTH_LONG)
+                    .setAction("checkout", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            navController.navigate(R.id.action_menuFragment3_to_cartFragment2);
+                        }
+                    })
+            .show();
+        }else{
+            Snackbar.make(requireView(), "Already have the max quantity in cart", Snackbar.LENGTH_LONG)
+                    .show();
+        }
+
     }
 
     @Override
     public void onItemClick(Item item) {
-        Log.d(TAG, "onItemClick: " + item.toString());
+
         menuViewModel.setItem(item);
         navController.navigate(R.id.action_menuFragment3_to_itemDetailFragment3);
 

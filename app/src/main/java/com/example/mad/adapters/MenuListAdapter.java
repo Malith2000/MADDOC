@@ -39,6 +39,7 @@ public class MenuListAdapter extends ListAdapter<Item, MenuListAdapter.menuViewH
     public void onBindViewHolder(@NonNull @NotNull MenuListAdapter.menuViewHolder holder, int position) {
         Item item = getItem(position);
         holder.menuRowBinding.setItem(item);
+        holder.menuRowBinding.executePendingBindings();
 
     }
 

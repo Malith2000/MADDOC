@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
-            android:textColor="@color/design_default_color_primary"
+            android:textColor="@{item.available ? @color/textSecondary : @color/red}"
             android:text="@{item.available ? 'Available' : 'Out of Stock'}"
             />
 
@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:enabled="@{item.available}"
+            android:onClick="@{()-> menuInterface.addItem(item)}"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:text="Add to Cart" />
