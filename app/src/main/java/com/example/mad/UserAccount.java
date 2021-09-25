@@ -1,12 +1,14 @@
 package com.example.mad;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -25,7 +27,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
-public class useraccount extends AppCompatActivity {
+public class UserAccount extends AppCompatActivity {
+    private static final String LOG_TAG= UserAccount.class.getSimpleName();
     public Button buttonup;
     public ImageButton quickmenu,homeBtn;
     private FirebaseUser user;
@@ -44,7 +47,7 @@ public class useraccount extends AppCompatActivity {
             @Override
             public void onClick(View v1) {
 
-                Intent intent3 = new Intent(useraccount.this, AccountMenu.class);
+                Intent intent3 = new Intent(UserAccount.this, AccountMenu.class);
                 startActivity(intent3);
             }
         });
@@ -54,7 +57,7 @@ public class useraccount extends AppCompatActivity {
             @Override
             public void onClick(View v1) {
 
-                Intent intent3 = new Intent(useraccount.this,Menu.class);
+                Intent intent3 = new Intent(UserAccount.this,Menu.class);
                 startActivity(intent3);
             }
         });
@@ -64,7 +67,7 @@ public class useraccount extends AppCompatActivity {
         buttonup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
-                Intent intent1 = new Intent(useraccount.this, updateAcc.class);
+                Intent intent1 = new Intent(UserAccount.this, updateAcc.class);
                 startActivity(intent1);
             }
         });
@@ -103,7 +106,7 @@ public class useraccount extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(useraccount.this,"Something Wrong Happened",Toast.LENGTH_LONG).show();
+                Toast.makeText(UserAccount.this,"Something Wrong Happened",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -111,7 +114,7 @@ public class useraccount extends AppCompatActivity {
         deleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder dialog = new AlertDialog.Builder(useraccount.this);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(UserAccount.this);
                 dialog.setTitle("Are you Sure?");
                 dialog.setMessage("Deleting this account will completely remove your account from the system");
                 dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
@@ -121,12 +124,13 @@ public class useraccount extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull @NotNull Task<Void> task) {
                                 if (task.isSuccessful()){
-                                    Toast.makeText(useraccount.this,"Account Deleted", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(useraccount.this, MainActivity.class);
+                                    deleteUserFromDB();
+                                    Toast.makeText(UserAccount.this,"Account Deleted", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(UserAccount.this, MainActivity.class);
                                     startActivity(intent);
                                 }
                                 else{
-                                    Toast.makeText(useraccount.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                    Toast.makeText(UserAccount.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
@@ -147,6 +151,18 @@ public class useraccount extends AppCompatActivity {
         });
 
 
+
+
+    }
+
+
+    private void deleteUserFromDB(){
+        reference.child(userID).removeValue(new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@Nullable @org.jetbrains.annotations.Nullable DatabaseError error, @NonNull @NotNull DatabaseReference ref) {
+                Log.d(LOG_TAG, "User deletion successful.");
+            }
+        }) ;
 
 
     }

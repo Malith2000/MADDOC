@@ -38,7 +38,7 @@ public class AccountMenu extends AppCompatActivity {
             @Override
             public void onClick(View v5) {
 
-                Intent intentam = new Intent(AccountMenu.this, useraccount.class);
+                Intent intentam = new Intent(AccountMenu.this, UserAccount.class);
                 startActivity(intentam);
             }
         });
@@ -68,7 +68,7 @@ public class AccountMenu extends AppCompatActivity {
         imagebutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(AccountMenu.this, useraccount.class);
+                Intent intent2 = new Intent(AccountMenu.this, UserAccount.class);
                 startActivity(intent2);
             }
         });
@@ -78,7 +78,7 @@ public class AccountMenu extends AppCompatActivity {
             @Override
             public void onClick(View v5) {
 
-                Intent intentam = new Intent(AccountMenu.this, useraccount.class);
+                Intent intentam = new Intent(AccountMenu.this, UserAccount.class);
                 startActivity(intentam);
             }
         });
