@@ -89,4 +89,9 @@
     <string name="rev_button">ADD REVIEW</string>
     <string name="rev_button_cus">CUSTOMER REVIEWS</string>
     <string name="rev_button_my">MY REVIEWS</string>
+    <string name="Add">Add</string>
+    <string name="foodname">Name</string>
+    <string name="foodprice">Price</string>
+    <string name="Addfood">Add Food</string>
+    <string name="addItems">Add Items to Categories</string>
 </resources>

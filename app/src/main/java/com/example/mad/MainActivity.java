@@ -115,9 +115,8 @@ public class MainActivity extends AppCompatActivity {
             public void onCallback(boolean value) {
                 if (value) {
                     Log.d(LOG_TAG, "Is an admin user.");
-                    /*TODO should redirect to another screen*/
-                    Intent intentmenu = new Intent(MainActivity.this, AccountMenu.class);
-                    startActivity(intentmenu);
+                    Intent adminMenu = new Intent(MainActivity.this, AddFood.class);
+                    startActivity(adminMenu);
                 } else {
                     Log.d(LOG_TAG, "Not an admin user.");
                     Intent intentmenu = new Intent(MainActivity.this, Menu.class);
@@ -145,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                       key = tyBpgK1ViOP0s5Ex1pN0xoA6E3b2,
                       value = {
-                          Email=admin@gmail.com,
-                          Password=admin123
+                          Email="admin@gmail.com",
+                          Password="admin123"
                         }
                     }
                      */
@@ -167,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         }catch(Exception e){
-            Log.d(LOG_TAG, "IUnexpected Error occured while checking the user type.");
+            Log.d(LOG_TAG, "Unexpected Error occured while checking the user type.");
             e.printStackTrace();
         }
     }

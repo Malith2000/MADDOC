@@ -10,10 +10,11 @@ import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Menu extends AppCompatActivity {
+public class AdminMenuView extends AppCompatActivity {
+
     public static final String CATEGORY_KEY=Menu.class.getSimpleName()+"_CATEGORY";
-    public Button button1;
-    public ImageButton imagebutton2,quickmenu;
+    public Button button1,button12;
+    public ImageButton imagebutton2,quickmenu,imagebutton23;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListner;
 
@@ -21,7 +22,7 @@ public class Menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_admin_menu_view);
 
         initHeaderIcons();
 
@@ -29,7 +30,7 @@ public class Menu extends AppCompatActivity {
         findViewById(R.id.btnRice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
-                Intent intent1 = new Intent(Menu.this, Menu2.class);
+                Intent intent1 = new Intent(AdminMenuView.this, Menu2.class);
                 intent1.putExtra(CATEGORY_KEY, "Rice");
                 startActivity(intent1);
             }
@@ -38,7 +39,7 @@ public class Menu extends AppCompatActivity {
         findViewById(R.id.btnNoodles).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
-                Intent intent1 = new Intent(Menu.this, Menu2.class);
+                Intent intent1 = new Intent(AdminMenuView.this, Menu2.class);
                 intent1.putExtra(CATEGORY_KEY, "Noodles");
                 startActivity(intent1);
             }
@@ -47,7 +48,7 @@ public class Menu extends AppCompatActivity {
         findViewById(R.id.btnKottu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
-                Intent intent1 = new Intent(Menu.this, Menu2.class);
+                Intent intent1 = new Intent(AdminMenuView.this, Menu2.class);
                 intent1.putExtra(CATEGORY_KEY, "Kottu");
                 startActivity(intent1);
             }
@@ -56,7 +57,7 @@ public class Menu extends AppCompatActivity {
         findViewById(R.id.btnBeverages).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
-                Intent intent1 = new Intent(Menu.this, Menu2.class);
+                Intent intent1 = new Intent(AdminMenuView.this, Menu2.class);
                 intent1.putExtra(CATEGORY_KEY, "Beverages");
                 startActivity(intent1);
             }
@@ -71,7 +72,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v1) {
 
-                Intent intent3 = new Intent(Menu.this, AccountMenu.class);
+                Intent intent3 = new Intent(AdminMenuView.this, AccountMenu.class);
                 startActivity(intent3);
             }
         });
@@ -82,15 +83,22 @@ public class Menu extends AppCompatActivity {
         imagebutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(Menu.this, UserAccount.class);
+                Intent intent2 = new Intent(AdminMenuView.this, UserAccount.class);
+                startActivity(intent2);
+            }
+        });
+
+        button12 = (Button)findViewById(R.id.button12);
+        button12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(AdminMenuView.this, AddFood.class);
                 startActivity(intent2);
             }
         });
 
 
+
+
     }
-
-
-
-
 }

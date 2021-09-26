@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu">
-
+    tools:context=".AdminMenuView">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -234,6 +233,15 @@
                 android:text="@string/VIEW"
                 app:backgroundTint="@color/teal_200" />
 
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/addItems"
+                app:backgroundTint="@color/teal_200" />
+
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="match_parent"
@@ -248,6 +256,5 @@
 
         </LinearLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -63,7 +63,7 @@ public class UserAccount extends AppCompatActivity {
         });
 
 
-        buttonup = (Button)findViewById(R.id.button4);
+        buttonup = (Button)findViewById(R.id.btnRice);
         buttonup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
