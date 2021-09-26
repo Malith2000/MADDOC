@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AccountMenu extends AppCompatActivity {
 
-    Button account,btnLogout,accountupdate,accountdelete;
+    Button account,btnLogout,accountupdate,accountdelete,reviews;
     public ImageButton homeBtn,imagebutton2;
     private FirebaseUser user;
     private DatabaseReference reference;
@@ -39,6 +39,16 @@ public class AccountMenu extends AppCompatActivity {
             public void onClick(View v5) {
 
                 Intent intentam = new Intent(AccountMenu.this, UserAccount.class);
+                startActivity(intentam);
+            }
+        });
+
+        reviews = (Button) findViewById(R.id.button16);
+        reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v5) {
+
+                Intent intentam = new Intent(AccountMenu.this, Review_main.class);
                 startActivity(intentam);
             }
         });

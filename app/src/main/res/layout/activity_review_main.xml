@@ -78,7 +78,9 @@
         android:layout_width="336dp"
         android:layout_height="80dp"
         android:layout_marginTop="170dp"
+        android:layout_marginBottom="52dp"
         android:text="@string/rev_button_cus"
+        app:layout_constraintBottom_toTopOf="@+id/button25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView9" />
@@ -87,7 +89,7 @@
         android:id="@+id/button25"
         android:layout_width="338dp"
         android:layout_height="80dp"
-        android:layout_marginTop="302dp"
+        android:layout_marginTop="300dp"
         android:layout_marginBottom="300dp"
         android:text="@string/rev_button_my"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
