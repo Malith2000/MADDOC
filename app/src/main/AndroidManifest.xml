@@ -39,7 +39,7 @@
         <activity android:name=".Menu" />
         <activity android:name=".AccountMenu" />
         <activity android:name=".updateAcc" />
-        <activity android:name=".useraccount" />
+        <activity android:name=".UserAccount" />
         <activity android:name=".Registration" />
         <activity android:name=".MainActivity">
             <intent-filter>

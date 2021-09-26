@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AccountMenu extends AppCompatActivity {
 
-    Button account,btnLogout;
+    Button account,btnLogout,accountupdate,accountdelete;
+    public ImageButton homeBtn,imagebutton2;
     private FirebaseUser user;
     private DatabaseReference reference;
 
@@ -31,12 +33,52 @@ public class AccountMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_menu);
 
+        accountdelete = (Button) findViewById(R.id.button11);
+        accountdelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v5) {
+
+                Intent intentam = new Intent(AccountMenu.this, UserAccount.class);
+                startActivity(intentam);
+            }
+        });
+
+
+        accountupdate = (Button) findViewById(R.id.button7);
+        accountupdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v5) {
+
+                Intent intentam = new Intent(AccountMenu.this, updateAcc.class);
+                startActivity(intentam);
+            }
+        });
+
+        homeBtn = (ImageButton)findViewById(R.id.imageButton23);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v1) {
+
+                Intent intent3 = new Intent(AccountMenu.this,Menu.class);
+                startActivity(intent3);
+            }
+        });
+
+        imagebutton2 = (ImageButton)findViewById(R.id.imageButton22);
+        imagebutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(AccountMenu.this, UserAccount.class);
+                startActivity(intent2);
+            }
+        });
+
         account = (Button) findViewById(R.id.button8);
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v5) {
 
-                Intent intentam = new Intent(AccountMenu.this, useraccount.class);
+                Intent intentam = new Intent(AccountMenu.this, UserAccount.class);
                 startActivity(intentam);
             }
         });
