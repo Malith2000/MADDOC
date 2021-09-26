@@ -86,4 +86,7 @@
     <string name="date_hint">Enter Date</string>
     <string name="submit">SUBMIT</string>
     <string name="Rev_header">REVIEW</string>
+    <string name="rev_button">ADD REVIEW</string>
+    <string name="rev_button_cus">CUSTOMER REVIEWS</string>
+    <string name="rev_button_my">MY REVIEWS</string>
 </resources>
