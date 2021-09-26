@@ -55,4 +55,9 @@
     <string name="Kottu">Kottu</string>
     <string name="VIEW">View</string>
     <string name="Beverages">Beverages</string>
+    <string name="Add">Add</string>
+    <string name="foodname">Name</string>
+    <string name="foodprice">Price</string>
+    <string name="Addfood">Add Food</string>
+    <string name="addItems">Add Items to Categories</string>
 </resources>
