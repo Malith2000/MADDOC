@@ -66,4 +66,24 @@
     <string name="datetxt">Date</string>
     <string name="myriewhead">MY REVIEWS</string>
     <string name="rating">Star Rating</string>
+    <string name="cusReview">CUSTOMER REVIEWS</string>
+    <string name="myReviewHeader">MY RIVIEWS</string>
+    <string name="MyReviewHead">MY REVIEWS</string>
+    <string name="nametxt">Name</string>
+    <string name="up_rev_head">EDIT REVIEW</string>
+    <string name="up_sub_buttn">SUBMIT</string>
+    <string name="Review_message">Message</string>
+    <string name="Review_date">Date</string>
+    <string name="Customer_name">Name</string>
+    <string name="my_rev_date">Date</string>
+    <string name="my_rev_message">Message</string>
+    <string name="edit_buttn">EDIT</string>
+    <string name="Delete_buttn">DELETE</string>
+    <string name="ed_rev_message">Message</string>
+    <string name="message_hint">Enter your message</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="email_hint">Enter your email address</string>
+    <string name="date_hint">Enter Date</string>
+    <string name="submit">SUBMIT</string>
+    <string name="Rev_header">REVIEW</string>
 </resources>

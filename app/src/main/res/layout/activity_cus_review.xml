@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_20210922_003736"
-    tools:context=".MyReviews">
+    tools:context=".Cus_review">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -91,16 +91,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="73dp"
                 android:gravity="center"
-                android:text="@string/MyReviewHead"
+                android:text="@string/cusReview"
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/my_rev_list"
+                android:id="@+id/rev_list"
                 android:layout_width="match_parent"
-                android:layout_height="513dp"
-                android:layout_marginTop="20dp" />
+                android:layout_height="534dp" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
@@ -115,7 +114,7 @@
 
                     <TextView
                         android:id="@+id/textView2"
-                        android:layout_width="444dp"
+                        android:layout_width="432dp"
                         android:layout_height="101dp"
                         android:background="#FFC107"
                         android:gravity="center_horizontal|center_vertical"
@@ -128,5 +127,4 @@
 
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
