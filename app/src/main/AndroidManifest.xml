@@ -10,12 +10,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.Mad">
         <activity android:name=".AdminMenuView"></activity>
         <activity android:name=".AddFood" />
         <activity android:name=".MenuBeverages" />
         <activity android:name=".MenuNoodles" />
         <activity android:name=".MenuKottu" />
+        <activity android:name=".Review_main"></activity>
+        <activity android:name=".Cus_review"></activity>
+        <activity android:name=".MyReviews"></activity>
+        <activity android:name=".Feedback"></activity>
+
+      
+
         <activity android:name=".Menu2">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
