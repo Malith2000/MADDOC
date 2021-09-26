@@ -13,15 +13,7 @@
         android:theme="@style/Theme.Mad" >
         <activity android:name=".MainActivityCart" >
         </activity>
-        <activity android:name=".menuNoodles" />
-        <activity android:name=".menuKottu" />
-        <activity android:name=".homeTakeaway" />
         <activity android:name=".kadiyaAddItem" />
-        <activity android:name=".homeDelivery" >
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".Menu2" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
