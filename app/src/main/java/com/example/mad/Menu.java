@@ -76,6 +76,16 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        // init cart icon
+        findViewById(R.id.imageButton21).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(Menu.this, CartDisplay.class);
+                startActivity(intent1);
+            }
+        });
+
+
 
         /*User account icon*/
         imagebutton2 = (ImageButton)findViewById(R.id.imageButton22);

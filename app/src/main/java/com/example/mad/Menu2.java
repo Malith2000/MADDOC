@@ -7,14 +7,18 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.mad.DatabaseDataTypes.CartItem;
 import com.example.mad.DatabaseDataTypes.CategoryCallBack;
 import com.example.mad.DatabaseDataTypes.FoodItem;
 import com.example.mad.DatabaseDataTypes.Product;
@@ -33,14 +37,21 @@ import com.google.firebase.storage.StorageReference;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Menu2 extends AppCompatActivity {
+
     public static final String LOG_TAG = Menu2.class.getSimpleName();
     private DatabaseReference reference;
     StorageReference storageRef;
     private String category;
     private ArrayList<Product> foodItems = new ArrayList<>();
+
     private LinearLayout layout;
 
     @Override
@@ -59,6 +70,14 @@ public class Menu2 extends AppCompatActivity {
 
         TextView t=(TextView)findViewById(R.id.fstTxt);
         t.setText(category);
+
+        findViewById(R.id.imageButton21).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(Menu2.this, CartDisplay.class);
+                startActivity(intent1);
+            }
+        });
 
 
         databaseHandler();
@@ -113,7 +132,7 @@ public class Menu2 extends AppCompatActivity {
 
 
                                         LinearLayout layout1 = new LinearLayout(Menu2.this);
-                                        layout1.setLayoutParams(new LinearLayout.LayoutParams(600, 600));
+                                        layout1.setLayoutParams(new LinearLayout.LayoutParams(600, 800));
                                         layout1.setGravity(Gravity.CENTER_HORIZONTAL);
                                         layout1.setOrientation(LinearLayout.VERTICAL);
 
@@ -133,6 +152,27 @@ public class Menu2 extends AppCompatActivity {
                                         tv2.setGravity(Gravity.CENTER_HORIZONTAL);
                                         tv2.setTextColor(getResources().getColor(R.color.black));
                                         layout1.addView(tv2);
+
+                                        Button button = new Button(Menu2.this);
+                                        button.setText("Add to cart");
+                                        button.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.yellow)));
+                                        button.setGravity(Gravity.CENTER_HORIZONTAL);
+                                        button.setTextSize(25);
+                                        button.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                addToCartFile(
+                                                        new CartItem(
+                                                                item.getName(),
+                                                                item.getId(),
+                                                                item.getPrice(),
+                                                                category,
+                                                                1
+                                                        )
+                                                );
+                                            }
+                                        });
+                                        layout1.addView(button);
 
 
                                         layout.addView(layout1);
@@ -211,6 +251,94 @@ public class Menu2 extends AppCompatActivity {
             Log.d(LOG_TAG, "Unexpected Error occured while retrieving data");
             e.printStackTrace();
         }
+    }
+
+
+
+
+
+    private void addToCartFile(CartItem i){
+
+
+        Log.d(LOG_TAG,"reading from file");
+        ArrayList<CartItem> cartItems=new ArrayList<>();
+        FileInputStream is =null;
+        ObjectInputStream ois=null;
+        try {
+            File file = new File(this.getFilesDir()  +"cart1.txt");
+            is = new FileInputStream(file);
+            ois = new ObjectInputStream(is);
+
+            while (is.available()!=0) {
+                CartItem cartItem = (CartItem) ois.readObject();
+                Log.d(LOG_TAG, "Has cart object");
+                if(cartItems.contains(cartItem)){
+                    for(CartItem j:cartItems){
+                        if(j==cartItem){
+                            j.setQuantity(i.getQuantity()+1);
+                        }
+                    }
+                }else{
+                    cartItems.add(cartItem);
+                }
+            }
+            Log.d(LOG_TAG,"reading from file complete");
+            Log.d(LOG_TAG, "Cart items in read: "+cartItems.toString());
+
+
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                if (ois != null) {
+                    ois.close();
+                }
+                if (is != null) {
+                    is.close();
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+
+        FileOutputStream fos =null;
+        ObjectOutputStream oos=null;
+        try{
+            File file = new File(this.getFilesDir() +"cart1.txt");
+            Log.d(LOG_TAG,file.getPath());
+            fos = new FileOutputStream(file);
+            oos = new ObjectOutputStream(fos);
+
+            if(cartItems.contains(i)){
+                for(CartItem c : cartItems){
+                    if(c.equals(i)){
+                        c.setQuantity(c.getQuantity()+1);
+                    }
+                }
+            }else{
+                cartItems.add(i);
+            }
+
+            for(CartItem p: cartItems){
+                oos.writeObject(p);
+            }
+            oos.flush();
+            Log.d(LOG_TAG, "wrote to file");
+
+        } catch ( IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                if (fos != null) {
+                    fos.close();
+                }
+                if (oos != null) {
+                    oos.close();
+                }
+            }catch (IOException e){
+            }
+        }
+
     }
 
 
